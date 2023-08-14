@@ -9,8 +9,11 @@
     - [Model Training](#model-training)
     - [Evaluate Model](#evaluate-model)
     - [Convert Model to ONNX](#convert-model-to-onnx)
-4. [Contributions](#contributions)
-5. [License](#license)
+4. [Model Deployment](#model-deployment)
+    - [Hugging Face](#hugging-face)
+    - [Render](#render)
+5. [Contributions](#contributions)
+6. [License](#license)
 
 
 ## Introduction
@@ -54,3 +57,33 @@ git clone https://github.com/2mdipro7/story-genre-classifier.git
 5. Convert Model to ONNX:
 
     Convert your trained model to the ONNX format for deployment using the convert_to_onnx.ipynb notebook.
+
+## Model Deployment
+
+1. **Hugging Face**
+
+    The model is deployed and accessible on Hugging Face's Model Hub. You can use it for inference and predictions by visiting the following link:
+    
+    [Story Genre Classifier - Hugging Face Model](https://huggingface.co/spaces/dipro7/story-genre-classifier)
+
+2. **Render**
+
+    Additionally, the model is deployed and hosted on Render, allowing you to interact with it via a web interface. You can access the deployed model using the following link:
+    
+    [Story Genre Classifier - Render Web Interface](https://story-genre-classifier.onrender.com)
+
+## Contributions
+
+Contributions are welcome! If you find any issues, have suggestions for enhancements, or want to contribute new features, feel free to submit pull requests or raise issues in the repository.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
+
+## Acknowledgments
+
+This project is inspired by the capabilities of Hugging Face Transformers and the ease of use provided by Fastai. Special thanks to the open-source community for their valuable contributions.
+
+---
+
+Feel free to explore the repository, experiment with the model, and contribute to make it even better. If you have any questions or need assistance, please don't hesitate to reach out. Happy coding!
