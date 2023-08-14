@@ -1,4 +1,4 @@
-# Multi-Label Text Classification with Hugging Face Transformers and Fastai
+# Story Genre Classification with Hugging Face Transformers and Fastai
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -15,7 +15,7 @@
 
 ## Introduction
 
-    This project demonstrates how to perform multi-label text classification using Hugging Face Transformers and Fastai. It involves training a deep learning model to predict multiple genre labels for a given text description.
+This project demonstrates how to perform multi-label text classification using Hugging Face Transformers and Fastai. It involves training a deep learning model to predict multiple genre labels for a given text description.
 
 ## Features
 
