@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            height: 5ch;
+            background-color: aqua;
+            color: white;
+            padding: 10px;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+        }
+
+        #text {
+            height: 150px;
+            width: 400px;
+            font-size: 16px;
+            padding: 10px;
+            border: 2px solid aqua;
+            border-radius: 5px;
+        }
+
+        #submit-btn {
+            margin-top: 10px;
+            padding: 5px 15px;
+            background-color: aqua;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #submit-btn:hover {
+            background-color: #009999;
+        }
+
+        #loading {
+            display: none;
+            color: aqua;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .lds-dual-ring {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+        }
+
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin: 1px;
+            border-radius: 50%;
+            border: 2px solid #009999;
+            border-color: #009999 transparent #009999 transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <div class="head"><b>Story Genre Classifier</b></div>
+</head>
+
+<body>
+    <div class="center">
+        <form action="/" method="post">
+            <label for="text"><b>Enter Your Story Summary or Snippets</b></label> <br />
+            <textarea id="text" name="text"></textarea> <br />
+            <button id="submit-btn" type="submit">Submit</button>
+            <div id="loading">
+                <span class="lds-dual-ring"></span> Loading...
+            </div>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const loading = document.getElementById('loading');
+
+        form.addEventListener('submit', () => {
+            loading.style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>

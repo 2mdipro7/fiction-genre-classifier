@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .head {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            height: 5ch;
+            background-color: aqua;
+            color: white;
+            padding: 10px;
+        }
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 70vh;
+        }
+
+        #result-box {
+            padding: 20px;
+            border: 2px solid aqua;
+            border-radius: 5px;
+            background-color: white;
+            width: 60%;
+            text-align: center;
+        }
+
+        #input-label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        #output-label {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <div class="head"><b>Story Genre Classifier</b></div>
+</head>
+
+<body>
+    <div class="center">
+        <div id="result-box">
+            <div id="input-label">Text in question:</div>
+            <div>{{ input_text }}</div>
+            <div id="output-label">What genres might they belong to:</div>
+            <div>{{ output_text }}</div>
+        </div>
+    </div>
+</body>
+
+</html>
