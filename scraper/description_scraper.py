@@ -95,16 +95,27 @@ def main():
         all_cover_urls = []
         all_color_info = []  # List to store color information
 
-        for id, url in tqdm(enumerate(urls), total=len(urls), desc="Scraping Progress"):
+        
+         # Read the last scraped record number from the "last_scraped_record.txt" file
+        try:
+            with open("tracker/last_scraped_record.txt", "r") as file:
+                last_scraped_record = int(file.read())
+        except FileNotFoundError:
+            last_scraped_record = 0
+
+        for id, url in tqdm(enumerate(urls[last_scraped_record:]), total=len(urls) - last_scraped_record, desc="Scraping Progress"):
+            # Increment the index by last_scraped_record to get the actual index in the original list
+            actual_index = id + last_scraped_record
+
             tags, description, cover_url, color_info = get_tags_description_and_cover_url(url, driver)
             all_tags.append(tags)
             all_descriptions.append(description)
             all_cover_urls.append(cover_url)
             all_color_info.append(color_info)  # Append color information
             time.sleep(2)  # Adding a short delay to avoid overwhelming the website
-            
+
             # Print the progress, title, tags, and description
-            print(f"Processed {id + 1} of {len(urls)} URLs. Title: {titles[id]}")
+            print(f"Processed {actual_index + 1} of {len(urls)} URLs. Title: {titles[actual_index]}")
             print(f"Tags: {tags}")
             print(f"Description: {description}")
             print(f"Cover URL: {cover_url}")
@@ -138,10 +149,10 @@ def main():
         df_new = pd.DataFrame(data)
 
         # Save the updated DataFrame to a new CSV file
-        df_new.to_csv("fiction_data_with_tags_and_cover_url.csv", index=False)
+        df_new.to_csv("fiction_data_with_tags_and_cover_url2.csv", index=False)
 
         # Save the last scraped record number to a txt file
-        with open("last_scraped_record.txt", "w") as file:
+        with open("tracker/last_scraped_record.txt", "w") as file:
             file.write(str(id + 1))
 
 if __name__ == "__main__":

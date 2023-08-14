@@ -35,9 +35,14 @@ git clone https://github.com/2mdipro7/story-genre-classifier.git
 
 2. Run the web scraping scripts:
 
-    First, run scraper1.py to retrieve the URLs of the files to be scraped.
-    Then, run scraper2.py to gather detailed information from the retrieved URLs.
-
+    First, run url_scraper.py to retrieve the URLs of the files to be scraped.
+    ```bash
+    python url_scraper.py
+    ```
+    Then, run description_scraper.py to gather detailed information from the retrieved URLs.
+    ```bash
+    python description_scraper.py
+    ```
 3. Model Training:
 
     Utilize the power of pre-trained transformer models from Hugging Face Transformers.
