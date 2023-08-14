@@ -3,3 +3,4 @@ certifi==2023.7.22
 Flask==2.2.5
 requests==2.31.0
 gunicorn==21.2.0
+gradio_client==0.4.0
