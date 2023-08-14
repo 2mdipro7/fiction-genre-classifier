@@ -6,6 +6,7 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
+            margin: 0;
         }
 
         .head {
@@ -13,7 +14,7 @@
             justify-content: center;
             align-items: center;
             font-size: 30px;
-            height: 5ch;
+            height: 10vh;
             background-color: aqua;
             color: white;
             padding: 10px;
@@ -24,7 +25,8 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 70vh;
+            height: 80vh;
+            padding: 20px;
         }
 
         #result-box {
@@ -32,7 +34,8 @@
             border: 2px solid aqua;
             border-radius: 5px;
             background-color: white;
-            width: 60%;
+            width: 80%;
+            max-width: 600px;
             text-align: center;
         }
 
@@ -46,6 +49,23 @@
             font-size: 20px;
             font-weight: bold;
             margin-top: 20px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            .head {
+                font-size: 24px;
+                height: 8vh;
+            }
+            #result-box {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .center {
+                padding: 10px;
+            }
         }
     </style>
     <div class="head"><b>Story Genre Classifier</b></div>
