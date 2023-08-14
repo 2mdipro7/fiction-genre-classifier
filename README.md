@@ -30,7 +30,7 @@ This project demonstrates how to perform multi-label text classification using H
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/your-username/multi-label-text-classification.git
+git clone https://github.com/2mdipro7/story-genre-classifier.git
 ```
 
 2. Run the web scraping scripts:
