@@ -39,56 +39,56 @@ git clone https://github.com/2mdipro7/story-genre-classifier.git
 
 ### 2. Run the web scraping scripts:
 
-    First, run url_scraper.py to retrieve the URLs of the files to be scraped.
-    ```bash
-    python url_scraper.py
-    ```
-    Then, run description_scraper.py to gather detailed information from the retrieved URLs.
-    ```bash
-    python description_scraper.py
-    ```
+First, run url_scraper.py to retrieve the URLs of the files to be scraped.
+```bash
+python url_scraper.py
+```
+Then, run description_scraper.py to gather detailed information from the retrieved URLs.
+```bash
+python description_scraper.py
+```
 ### 3. Model Training:
 
 #### Leveraging Pre-trained Transformer Models
-    In this project, we harnessed the power of pre-trained transformer models from Hugging Face Transformers to elevate our text classification capabilities. By tapping into these models, we gained access to their extensive knowledge of language and context, allowing us to achieve impressive results in genre classification.
+In this project, we harnessed the power of pre-trained transformer models from Hugging Face Transformers to elevate our text classification capabilities. By tapping into these models, we gained access to their extensive knowledge of language and context, allowing us to achieve impressive results in genre classification.
 
 #### Our Choice: bert-base-uncased Architecture
-    For this project, we selected the **bert-base-uncased** architecture, a well-established variant of BERT that's specifically designed for uncased text. By making this strategic choice, we enabled our model to comprehend the subtleties of language usage, leading to enhanced accuracy and performance in genre classification.
+For this project, we selected the **bert-base-uncased** architecture, a well-established variant of BERT that's specifically designed for uncased text. By making this strategic choice, we enabled our model to comprehend the subtleties of language usage, leading to enhanced accuracy and performance in genre classification.
 
 #### Model Training in model_training.ipynb
-    Our journey is documented in the model_training.ipynb notebook, where we documented each step of the training process. From preprocessing our data to configuring the model, defining the loss function, selecting optimization strategies, and monitoring training progress, the notebook serves as a comprehensive guide to our approach.
+Our journey is documented in the model_training.ipynb notebook, where we documented each step of the training process. From preprocessing our data to configuring the model, defining the loss function, selecting optimization strategies, and monitoring training progress, the notebook serves as a comprehensive guide to our approach.
 
 ### 4. Model Evaluation:
 
-    Here is how our model performed after training for 7 epochs:
+Here is how our model performed after training for 7 epochs:
 
-        | Metric            | Score   |
-        |----------------   |---------|
-        | Accuracy Multi    | 0.87    |
-        | F1 (Micro)        | 0.65    |
-        | F1 (Macro)        | 0.52    |
-        | ROC AUC (Micro)   | 0.77    |
-        | ROC AUX (Macro)   | 0.71    |
+| Metric            | Score   |
+|----------------   |---------|
+| Accuracy Multi    | 0.87    |
+| F1 (Micro)        | 0.65    |
+| F1 (Macro)        | 0.52    |
+| ROC AUC (Micro)   | 0.77    |
+| ROC AUX (Macro)   | 0.71    |
 
-    Refer to the model_evaluation.ipynb notebook for detailed instructions.
+Refer to the model_evaluation.ipynb notebook for detailed instructions.
 
 ### 5. Convert Model to ONNX:
 
-    Convert your trained model to the ONNX format for deployment using the convert_to_onnx.ipynb notebook.
+Convert your trained model to the ONNX format for deployment using the convert_to_onnx.ipynb notebook.
 
 ## Model Deployment
 
 ### 1. **Hugging Face**
 
-    The model is deployed and accessible on Hugging Face's Model Hub. You can use it for inference and predictions by visiting the following link:
-    
-    [Story Genre Classifier - Hugging Face Model](https://huggingface.co/spaces/dipro7/story-genre-classifier)
+The model is deployed and accessible on Hugging Face's Model Hub. You can use it for inference and predictions by visiting the following link:
+
+[Story Genre Classifier - Hugging Face Model](https://huggingface.co/spaces/dipro7/story-genre-classifier)
 
 ### 2. **Render**
 
-    Additionally, the model is deployed and hosted on Render, allowing you to interact with it via a web interface. You can access the deployed model using the following link:
-    
-    [Story Genre Classifier - Render Web Interface](https://story-genre-classifier.onrender.com)
+Additionally, the model is deployed and hosted on Render, allowing you to interact with it via a web interface. You can access the deployed model using the following link:
+
+[Story Genre Classifier - Render Web Interface](https://story-genre-classifier.onrender.com)
 
 ## Contributions
 
