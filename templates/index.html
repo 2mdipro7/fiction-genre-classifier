@@ -7,6 +7,9 @@
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
             margin: 0;
+            background-image: url("/static/more-leaves.png");
+            background-size: cover;
+            background-repeat: repeat;
         }
 
         .head {
@@ -110,7 +113,7 @@
     <div class="center">
         <form action="/" method="post">
             <label for="text"><b>Enter Your Story Summary or Snippets</b></label> <br />
-            <textarea id="text" name="text"></textarea> <br />
+            <textarea id="text" name="text" placeholder="Write your story here..."></textarea> <br />
             <button id="submit-btn" type="submit">Submit</button>
             <div id="loading">
                 <span class="lds-dual-ring"></span> Loading...
